@@ -100,15 +100,15 @@ for s = 1, screen.count() do
   -- Each screen has its own tag table.
   tags[s] = awful.tag(tags.names, s, tags.layout)
 end
-for s = 1, screen.count() do
-  for t = 1, 9 do
-    tags[s][t]:add_signal("property::selected", function(tag)
-      if not tag.selected then return end
-      wallpaper_cmd = "awsetbg /home/lucas/.config/awesome/themes/solarized/solarized-background-" .. t .. ".png"
-      awful.util.spawn(wallpaper_cmd)
-    end)
-  end
-end
+-- for s = 1, screen.count() do
+--   for t = 1, 9 do
+--     tags[s][t]:add_signal("property::selected", function(tag)
+--       if not tag.selected then return end
+--       wallpaper_cmd = "awsetbg /home/lucas/.config/awesome/themes/solarized/solarized-background-" .. t .. ".png"
+--       awful.util.spawn(wallpaper_cmd)
+--     end)
+--   end
+-- end
 -- }}}
 
 -- {{{ Menu

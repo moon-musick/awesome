@@ -409,22 +409,22 @@ awful.rules.rules = {
     --   properties = { tag = tags[1][2] } },
     
     -- Set Firefox to always map on tags number 2 of the last used screen.
-    { rule = { class = "Firefox"  },  properties = {tag = tags[screen.count()][2]} },
+    -- { rule = { class = "Firefox"  },  properties = {tag = tags[screen.count()][2]} },
 
     -- Set Zathura to always map on tags number 3 of the last used screen.
-    { rule = { class = "Zathura"  },  properties = {tag = tags[screen.count()][3]} },
+    -- { rule = { class = "Zathura"  },  properties = {tag = tags[screen.count()][3]} },
     -- Set Mendeleydesktop to always map on tags number 3 of the last used screen.
-    { rule = { class = "Mendeleydesktop"  }, properties = {tag = tags[screen.count()][3]} },
+    -- { rule = { class = "Mendeleydesktop"  }, properties = {tag = tags[screen.count()][3]} },
 
     -- Set Skype to always map on tags number 4 of the last used screen.
-    { rule = { class = "Skype"  },    properties = {tag = tags[screen.count()][4]} },
+    -- { rule = { class = "Skype"  },    properties = {tag = tags[screen.count()][4]} },
  
     -- Set Spotify to always map on tags number 5 of the last used screen.
-    { rule = { class = "Spotify"  },    properties = {tag = tags[screen.count()][5]} },
+    -- { rule = { class = "Spotify"  },    properties = {tag = tags[screen.count()][5]} },
     -- Set Vlc to always map on tags number 5 of the last used screen.
-    { rule = { class = "Vlc"  },    properties = {tag = tags[screen.count()][5]} },
+    -- { rule = { class = "Vlc"  },    properties = {tag = tags[screen.count()][5]} },
     -- Set Transmission to always map on tags number 5 of the last used screen.
-    { rule = { class = "Transmission"  },    properties = {tag = tags[screen.count()][5]} },
+    -- { rule = { class = "Transmission"  },    properties = {tag = tags[screen.count()][5]} },
 
     -- Start windows as slave
     { rule = {  }, properties = {  }, callback = awful.client.setslave  }

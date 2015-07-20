@@ -308,8 +308,8 @@ globalkeys = awful.util.table.join(
     -- Escape from keyboard focus trap (eg Flash plugin in Firefox)
     -- https://awesome.naquadah.org/wiki/Workaround_plugins_that_steal_the_keyboard_focus
     awful.key({ modkey, "Control"  }, "Escape", function ()
-       awful.util.spawn("xdotool getactivewindow mousemove --window %1 0 0 click --clearmodifiers 2")
-     end),
+      awful.util.spawn("xdotool getactivewindow mousemove --window %1 0 0 click --clearmodifiers 2")
+    end),
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 

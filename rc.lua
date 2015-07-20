@@ -299,6 +299,12 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "u",     function () awful.client.incwfact( 0.01  ) end),
     awful.key({ modkey,           }, "i",     function () awful.client.incwfact(-0.01)  end),
 
+    awful.key({ modkey,           }, "p",     function()
+      awful.util.spawn_with_shell(
+        "dmenu_run -f -i -fn Inconsolata-11:normal -nb '#93a1a1' -nf '#002b36' -sb '#859900' -sf '#fdf6e3'"
+      )
+    end),
+
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- enable media keys
@@ -407,7 +413,7 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
-    
+
     -- Set Firefox to always map on tags number 2 of the last used screen.
     -- { rule = { class = "Firefox"  },  properties = {tag = tags[screen.count()][2]} },
 
@@ -418,7 +424,7 @@ awful.rules.rules = {
 
     -- Set Skype to always map on tags number 4 of the last used screen.
     -- { rule = { class = "Skype"  },    properties = {tag = tags[screen.count()][4]} },
- 
+
     -- Set Spotify to always map on tags number 5 of the last used screen.
     -- { rule = { class = "Spotify"  },    properties = {tag = tags[screen.count()][5]} },
     -- Set Vlc to always map on tags number 5 of the last used screen.

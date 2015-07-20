@@ -61,9 +61,19 @@ terminal = "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
+-- http://awesome.naquadah.org/wiki/Autostart
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+    findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+end
+
 awful.util.spawn_with_shell("killall unagi; sleep 3; unagi &")
 awful.util.spawn_with_shell("setxkbmap -option 'ctrl:nocaps' 'pl(legacy)'")
-awful.util.spawn_with_shell("run_once nm-applet")
+run_once("nm-applet")
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.

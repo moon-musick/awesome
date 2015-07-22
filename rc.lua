@@ -312,6 +312,9 @@ globalkeys = awful.util.table.join(
       )
     end),
 
+    awful.key({ modkey, "Shift"   }, "l",     function () awful.util.spawn_with_shell("~/bin/lock") end),
+    awful.key({ modkey,           }, "x",     function () awful.util.spawn_with_shell("scrot $HOME/Obrazy/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png") end),
+
     -- Escape from keyboard focus trap (eg Flash plugin in Firefox)
     -- https://awesome.naquadah.org/wiki/Workaround_plugins_that_steal_the_keyboard_focus
     awful.key({ modkey, "Control"  }, "Escape", function ()
@@ -329,7 +332,7 @@ globalkeys = awful.util.table.join(
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
-    awful.key({ modkey }, "x",
+    awful.key({ modkey, "Shift" }, "x",
               function ()
                   awful.prompt.run({ prompt = "Run Lua code: " },
                   mypromptbox[mouse.screen].widget,

@@ -312,7 +312,7 @@ globalkeys = awful.util.table.join(
       )
     end),
 
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.util.spawn_with_shell("~/bin/lock") end),
+    awful.key({ modkey,           }, "g",     function () awful.util.spawn_with_shell("~/bin/lock") end),
     awful.key({ modkey,           }, "x",     function () awful.util.spawn_with_shell("scrot $HOME/Obrazy/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png") end),
 
     -- Escape from keyboard focus trap (eg Flash plugin in Firefox)

@@ -72,6 +72,7 @@ function run_once(cmd)
 end
 
 awful.util.spawn_with_shell("killall unagi; sleep 3; unagi &")
+awful.util.spawn_with_shell("~/bin/locker")
 awful.util.spawn_with_shell("setxkbmap -option 'ctrl:nocaps' 'pl(legacy)'")
 run_once("nm-applet")
 
@@ -312,7 +313,8 @@ globalkeys = awful.util.table.join(
       )
     end),
 
-    awful.key({ modkey,           }, "g",     function () awful.util.spawn_with_shell("~/bin/lock") end),
+    -- awful.key({ modkey,           }, "g",     function () awful.util.spawn_with_shell("~/bin/lock") end),
+    awful.key({ modkey,           }, "g",     function () awful.util.spawn_with_shell("xautolock -locknow") end),
     awful.key({ modkey,           }, "x",     function () awful.util.spawn_with_shell("scrot $HOME/Obrazy/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png") end),
 
     -- Escape from keyboard focus trap (eg Flash plugin in Firefox)

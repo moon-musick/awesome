@@ -47,6 +47,8 @@ end
 dmenu_cmd = "dmenu_run -f -i -fn Inconsolata-11:normal -nb '#93a1a1' -nf '#002b36' -sb '#859900' -sf '#fdf6e3'"
 screenshot_cmd = "scrot $HOME/Obrazy/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png"
 
+redshift_cmd = "redshift -c ~/.config/redshift.conf"
+
 -- Themes define colours, icons, font and wallpapers.
 do local config_path = awful.util.getdir("config")
     local function init_theme(theme_name)
@@ -77,6 +79,7 @@ awful.util.spawn_with_shell("setxkbmap -option 'ctrl:nocaps' 'pl(legacy)'")
 --- xautolock
 awful.util.spawn_with_shell("~/bin/locker")
 run_once("nm-applet")
+run_once(redshift_cmd)
 
 -- This is used later as the default terminal and editor to run.
 terminal   = "x-terminal-emulator"

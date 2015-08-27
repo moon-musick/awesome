@@ -131,10 +131,10 @@ tags = {
     "docs",
     "comm",
     "media",
-    6,
-    7,
     "aux",
-    9
+    "aux2",
+    "work",
+    "shell"
   },
   layout = {
     layouts[1],

@@ -136,9 +136,9 @@ tags = {
     "comm",
     "media",
     "aux",
-    "aux2",
-    "work",
-    "shell"
+    "term",
+    "web",
+    "term"
   },
   layout = {
     layouts[1],

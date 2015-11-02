@@ -12,10 +12,10 @@ themepath           = os.getenv("HOME") .. "/.config/awesome/themes/solarized/"
 theme.wallpaper_cmd = { "awsetbg " .. themepath .. "solarized-background-mono.png" }
 
 -- Styles
-theme.font      = "DejaVu Mono 8"
+theme.font      = "Inconsolata 11"
 
 -- lain 'useless gap' layouts gap width
-theme.useless_gap_width = 5
+theme.useless_gap_width = 8
 
 -- Colors
 theme.fg_normal = "#93a1a1"

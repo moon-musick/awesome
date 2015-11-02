@@ -1,4 +1,4 @@
--- vim: softtabstop=4 tabstop=4 shiftwidth=4 expandtab
+-- vim: ft=lua:ts=4:sts=4:sw=4:et
 
 -- Standard awesome library
 local gears      = require("gears")

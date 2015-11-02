@@ -475,7 +475,10 @@ globalkeys = awful.util.table.join(
           end),
 
     -- Menubar
-    awful.key({ modkey, "Shift" }, "p", function() menubar.show() end)
+    awful.key({ modkey, "Shift" }, "p", function() menubar.show() end),
+
+    -- move mouse cursor away
+    awful.key({ modkey, "Shift" }, "m", function () awful.util.spawn("xdotool mousemove 0 0") end)
 )
 
 clientkeys = awful.util.table.join(

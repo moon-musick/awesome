@@ -265,6 +265,11 @@ mysysload = lain.widgets.sysload({
      end
 })
 
+--- MPD
+mpdwidget = lain.widgets.mpd({
+    timeout = 2,
+})
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -345,6 +350,7 @@ for s = 1, screen.count() do
     right_layout = wibox.layout.fixed.horizontal()
     -- if s == 1 then right_layout:add(wibox.widget.systray()) end
     -- right_layout:add(netdownicon)
+    right_layout:add(mpdwidget)
     right_layout:add(netdowninfo)
     -- right_layout:add(netupicon)
     right_layout:add(netupinfo)

@@ -199,9 +199,9 @@ baticon = wibox.widget.imagebox(beautiful.widget_batt)
 batwidget = lain.widgets.bat({
     settings = function()
         if bat_now.perc == "N/A" then
-            perc = "| Battery: AC "
+            perc = "| ⚡ AC "
         else
-            perc = "| Battery: " .. bat_now.perc .. "% "
+            perc = "| ⚡ " .. bat_now.perc .. "% "
         end
         widget:set_text(perc)
     end
@@ -223,10 +223,10 @@ volicon = wibox.widget.imagebox(beautiful.widget_vol)
 volumewidget = lain.widgets.alsa({
     settings = function()
         if volume_now.status == "off" then
-            volume_now.level = "| Vol: " .. volume_now.level .. "M"
+            volume_now.level = "| ♫ " .. volume_now.level .. "M"
         end
 
-        widget:set_text("| Vol: " .. volume_now.level .. "% ")
+        widget:set_text("| ♫ " .. volume_now.level .. "% ")
     end
 })
 
@@ -244,8 +244,8 @@ netupinfo = lain.widgets.net({
             myweather.update()
         end
 
-        widget:set_markup(markup("#dc322f", " " .. net_now.sent .. " "))
-        netdowninfo:set_markup(markup("#859900", " " .. net_now.received .. " "))
+        widget:set_markup(markup("#dc322f", " ↑" .. net_now.sent .. " "))
+        netdowninfo:set_markup(markup("#859900", " ↓" .. net_now.received .. " "))
     end
 })
 
@@ -261,7 +261,7 @@ memwidget = lain.widgets.mem({
 mysysload = lain.widgets.sysload({
      timeout = 5,
      settings = function()
-         widget:set_text("| Load: " .. load_1 .. " |")
+         widget:set_text("| " .. load_1 .. " |")
      end
 })
 

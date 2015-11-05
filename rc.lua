@@ -272,7 +272,7 @@ mpdwidget = lain.widgets.mpd({
 
 --- Mail
 function mailcount()
-    os.execute("~/bin/newmail > ~/.mailcount")
+    os.execute("~/.config/awesome/bin/newmail > ~/.mailcount")
     local f = io.open(os.getenv("HOME") .. "/.mailcount")
     local l = nil
     if f ~= nil then

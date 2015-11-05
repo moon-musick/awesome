@@ -270,6 +270,25 @@ mpdwidget = lain.widgets.mpd({
     timeout = 2,
 })
 
+--- Mail
+function mailcount()
+    os.execute("~/bin/newmail > ~/.mailcount")
+    local f = io.open(os.getenv("HOME") .. "/.mailcount")
+    local l = nil
+    if f ~= nil then
+        l = f:read()
+    else
+        l = "?"
+    end
+    f:close()
+    return l
+end
+
+mymail = wibox.widget.textbox(mailcount())
+mymail.timer = timer({timeout=20})
+mymail.timer:connect_signal("timeout", function() mymail:set_markup(mailcount()) end)
+mymail.timer:start()
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -355,6 +374,7 @@ for s = 1, screen.count() do
     -- right_layout:add(netupicon)
     right_layout:add(netupinfo)
     -- right_layout:add(volicon)
+    right_layout:add(mymail)
     right_layout:add(volumewidget)
     -- right_layout:add(baticon)
     right_layout:add(batwidget)

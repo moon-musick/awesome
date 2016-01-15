@@ -15,7 +15,7 @@ theme.wallpaper_cmd = { "awsetbg " .. themepath .. "solarized-background-mono.pn
 theme.font      = "Inconsolata 11"
 
 -- lain 'useless gap' layouts gap width
-theme.useless_gap_width = 8
+-- theme.useless_gap_width = 8
 
 -- Colors
 theme.fg_normal = "#93a1a1"
